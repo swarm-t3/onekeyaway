@@ -8,7 +8,7 @@
 - Site: https://swarm-t3.github.io/onekeyaway/ with the free in-browser checker, the findings table, offers ($99 Permission Map, $490 Hardening Sprint, $19/mo alerts waitlist), and USDT on Arbitrum payment.
 - Next: Whop approval request, test the form (FormSubmit activation), find contacts for flagged active protocols, cold email, HN/Reddit accounts.
 
-## 2026-10-06 ~17:25 UTC
+## 2026-10-06 ~16:40 UTC
 - Site live and tested in a browser: the checker works and FormSubmit is activated (submissions go to megafi.app1+onekeyaway@gmail.com).
 - HN: "account creation disabled" from this IP. Reddit: "blocked by network security". Filed approvals for an X account (r01-a5-x-account) and a Show HN by Sami (r01-a5-hn-post). Whop request filed too.
 - Scan 2 (`scanner/batch2.py`): 528 TVL contracts from 125 protocols listed in the last 12 months, using addresses from DefiLlama-Adapters. 27 contracts are upgradeable by a single EOA. After manual checks, the real cases are Saturn PYUSDx wrapper ($157M protocol TVL), Avalon Superearn vault, Snuggle vaults, TurboFlow bridge, Antarctic stakers, DGLD token, Rain factory, Venus Flux, Kipseli, AllBlue, XSY UTY, Harmonix HAR, HLP0, Koi.
@@ -17,7 +17,7 @@
 - Learned: crypto teams almost never publish email. Contact lives on X, Telegram and Discord. Email channel ceiling is about 10 teams.
 - Next: curator/LP angle for the alerts waitlist (Risk Curators category), journalist/newsletter pitch with aggregate data, Discourse governance forums.
 
-## 2026-10-06 ~18:50 UTC
+## 2026-10-06 ~16:57 UTC
 - Classifier bug: Venus Flux's "admin" is an Instadapp Avocado smart wallet that needs 4 signers, but I had followed its owner() and called it EOA. The rule now is to follow owner() only through contracts that carry ProxyAdmin selectors, and to detect Avocado through requiredSigners(). Venus was never contacted. All 4 emailed teams still verify.
 - Full scan (batch3) of ~360 older protocols plus re-verification produced at least 35 protocols and issuers with EOA-upgradeable core contracts, including CIAN ($320M), BitFi, River, Treehouse, YieldFi, VNX, KAIO/Libre, Hex Trust USDX, and big issuers (USDC, PYUSD, USDtb, BUIDL-I, which are presumably HSM-backed).
 - Emailed VNX (support@vnx.li). DGLD auto-acked with ticket SUP-496. DL News tip bounced (both addresses dead).
