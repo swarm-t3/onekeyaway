@@ -33,8 +33,10 @@ code{background:#21262d;padding:1px 5px;border-radius:4px;font-size:.9em;word-br
 <div id="out" class="mut" style="margin-top:10px">Runs in your browser over public RPC. Nothing is sent to us.</div>
 </div>
 
-<h2>What we found in 480 DeFi tokens</h2>
-<p class="mut">We took every DeFi protocol on <a href="https://defillama.com">DefiLlama</a> with at least $300k TVL that lists an EVM governance or protocol token on one of 15 chains, then read each token's control path on-chain. Scanned 2026-10-06. These are public on-chain facts, and each address links to a block explorer so you can check it. A single-key owner is not automatically dangerous: what matters is what that owner can call. Upgrade rights and mint rights are the serious cases.</p>
+<h2>What we found</h2>
+<div class="card"><b>Contracts holding TVL, protocols listed on DefiLlama in the last 12 months:</b> we read the control path of 528 contracts from 125 protocols using addresses from DefiLlama's open-source TVL adapters. <b class="red">At least 13 protocols, with up to $412M TVL each, have a fund-holding or core contract whose upgrade path ends at a single EOA with no timelock.</b> Examples include a $157M stablecoin wrapper, a $142M yield vault and a perps bridge that holds user deposits. We contact each team privately before we publish contract-level rows. This applies whether or not they buy anything.</div>
+<h3>Governance and protocol tokens (480 scanned)</h3>
+<p class="mut">We took every DeFi protocol on <a href="https://defillama.com">DefiLlama</a> with at least $300k TVL that lists an EVM governance or protocol token on one of 15 chains, then read each token's control path on-chain. Scanned 2026-10-06. These are public on-chain facts, and each address links to a block explorer so you can check it. "Single key" here means one EOA, which may be MPC- or HSM-backed off-chain. A single-EOA owner is not automatically dangerous: what matters is what that owner can call. For example, the Superform UP token has an EOA owner, but its mint is locked for 3 years and capped at 2% a year. Upgrade rights and mint rights are the serious cases.</p>
 <div class="stats" id="stats"></div>
 <p><label><input type="checkbox" id="onlyrisk" checked onchange="render()"> Show single-key cases only</label> · <input type="text" id="q" placeholder="filter by protocol" style="width:220px" oninput="render()"></p>
 <div style="overflow-x:auto"><table id="tbl"></table></div>
@@ -72,7 +74,7 @@ const ch=document.getElementById('chain');Object.keys(RPC).forEach(k=>ch.add(new
 async function rpc(c,m,p){try{const r=await fetch(RPC[c],{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:1,method:m,params:p})});const j=await r.json();return j.error?null:j.result}catch(e){return null}}
 const w2a=w=>{if(!w||w.length<66)return null;const a="0x"+w.slice(-40);return /^0x0{40}$/.test(a)?null:a};
 const call=(c,to,d)=>rpc(c,"eth_call",[{to,data:d},"latest"]);const code=(c,a)=>rpc(c,"eth_getCode",[a,"latest"]);
-async function ctl(c,a,d=0){const k=await code(c,a);if(!k||k==="0x")return{t:"EOA (single private key)",a,r:"single"};if(k.startsWith("0xef0100"))return{t:"EOA with 7702 delegation",a,r:"single"};
+async function ctl(c,a,d=0){const k=await code(c,a);if(!k||k==="0x")return{t:"EOA (one signer, no on-chain multisig)",a,r:"single"};if(k.startsWith("0xef0100"))return{t:"EOA with 7702 delegation",a,r:"single"};
 const th=await call(c,a,"0xe75235b8");if(th&&th.length>=66){const n=parseInt(th,16);const o=await call(c,a,"0xa0e67e2b");let owners=[];if(o&&o.length>=130){const m=parseInt(o.slice(66,130),16);for(let i=0;i<m;i++)owners.push("0x"+o.slice(130+64*i+24,130+64*(i+1)))}
 const res={t:`Safe ${n}-of-${owners.length}`,a,r:n>1?"multi":"single"};if(n<=1&&d<2){res.sub=[];for(const x of owners.slice(0,5))res.sub.push(await ctl(c,x,d+1));const rs=res.sub.map(s=>s.r);res.r=rs.includes("single")?"single":rs.includes("unknown")?"unknown":rs.includes("multi")?"multi":"timelock"}return res}
 for(const s of["0xf27a0c92","0x6a42b8f8"]){const x=await call(c,a,s);if(x&&x.length>=66)return{t:`Timelock (${Math.round(parseInt(x,16)/3600)}h delay)`,a,r:"timelock"}}
@@ -86,12 +88,12 @@ const roles=[];if(ad)roles.push(["Proxy admin: can replace all the code",ad]);el
 const ow=w2a(await call(c,a,"0x8da5cb5b"));if(ow)roles.push([impl&&!ad?"owner() (UUPS proxy: can replace all the code)":"owner()",ow]);
 let h=`<p>Upgradeable: <b>${impl||be?"yes":"no proxy detected"}</b></p>`;if(!roles.length)h+="<p>No proxy admin or owner() found. It may use AccessControl roles, which this free check doesn't enumerate. The Permission Map covers them.</p>";
 let worst="";for(const[r,x]of roles){const t=await ctl(c,x);if(t.r==="single")worst="single";h+=`<p><b>${r}</b><br>${fmt(c,t)}</p>`}
-if(worst)h+=`<p class="red">At least one power on this contract comes down to a single private key.</p><p><a href="#pricing">Get the full Permission Map →</a></p>`;o.innerHTML=h;
+if(worst)h+=`<p class="red">At least one power on this contract comes down to a single EOA signer with no on-chain multisig or timelock. That EOA may sit behind MPC or an HSM, which can\'t be checked on-chain, but a compromised signer could still act instantly.</p><p><a href="#pricing">Get the full Permission Map →</a></p>`;o.innerHTML=h;
 }
 let D=[];fetch('data.json').then(r=>r.json()).then(j=>{D=j.rows;stats();render()});
 const M=v=>v>=1e9?"$"+(v/1e9).toFixed(1)+"B":v>=1e6?"$"+(v/1e6).toFixed(1)+"M":"$"+Math.round(v/1e3)+"k";
 function stats(){const up=D.filter(r=>r.v==="SINGLE KEY can upgrade"),ow=D.filter(r=>r.v==="SINGLE KEY owner"),ms=D.filter(r=>r.v==="multisig, no timelock"),tl=D.filter(r=>r.v==="timelock / multisig");
-document.getElementById('stats').innerHTML=[[D.length,"tokens scanned"],[up.length,"upgradeable by one key"],[ow.length,"owned by one key"],[ms.length,"multisig, no timelock"],[tl.length,"behind a timelock"]].map(([n,l])=>`<div class=stat><b>${n}</b>${l}</div>`).join("")}
+document.getElementById('stats').innerHTML=[[D.length,"tokens scanned"],[up.length,"upgradeable by one EOA"],[ow.length,"owned by one EOA"],[ms.length,"multisig, no timelock"],[tl.length,"behind a timelock"]].map(([n,l])=>`<div class=stat><b>${n}</b>${l}</div>`).join("")}
 function render(){const only=document.getElementById('onlyrisk').checked,q=document.getElementById('q').value.toLowerCase();
 let rs=D.filter(r=>(!only||r.v.startsWith("SINGLE"))&&(!q||r.p.toLowerCase().includes(q))).sort((a,b)=>(b.v==="SINGLE KEY can upgrade")-(a.v==="SINGLE KEY can upgrade")||b.tvl-a.tvl);
 document.getElementById('tbl').innerHTML="<tr><th>Protocol</th><th>Token</th><th>TVL</th><th>Verdict</th><th>Control path</th><th>Code has</th></tr>"+rs.map(r=>`<tr><td>${r.p}</td><td><a href="${EXP[r.chain]}${r.a}" target=_blank>${r.sym||"token"}</a> <span class=mut>${r.chain}</span></td><td>${M(r.tvl)}</td><td class="${r.v.startsWith("SINGLE")?"red":r.v.includes("timelock /")?"grn":"amb"}">${r.v}</td><td>${r.c.map(c=>`${c.role}: ${c.type} <a href="${EXP[r.chain]}${c.addr}" target=_blank>${c.addr.slice(0,8)}…</a>`).join("<br>")||"-"}</td><td>${r.powers.join(", ")}</td></tr>`).join("")}
