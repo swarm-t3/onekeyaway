@@ -92,7 +92,12 @@ def classify_controller(chain, a, depth=0):
         d = call(chain, a, SEL[s])
         if d and d != "0x" and len(d) >= 66:
             return {"type": "Timelock", "address": a, "delay_s": int(d, 16)}
-    if depth < 2:  # e.g. ProxyAdmin -> owner
+    rs = call(chain, a, "0x2772aed9")  # requiredSigners(): Avocado multisig
+    if rs and rs != "0x" and len(rs) >= 66:
+        th = int(rs, 16)
+        return {"type": f"Avocado wallet ({th} required signer{'s' if th != 1 else ''})", "address": a, "threshold": th, "owners": None}
+    is_pa = any(x in c for x in ("639623609d", "6399a88ec4", "63ad3cb1cc", "637eff275e"))
+    if depth < 2 and is_pa:  # only follow owner() through a real ProxyAdmin
         o = addr_from_word(call(chain, a, SEL["owner"]))
         if o:
             inner = classify_controller(chain, o, depth + 1)
@@ -107,6 +112,8 @@ def weakest(ctrl):
         return weakest(ctrl["via"])
     if t.startswith("EOA"):
         return "single-key"
+    if t.startswith("Avocado"):
+        return "multisig" if ctrl.get("threshold", 0) > 1 else "single-key"
     if t == "Safe":
         if ctrl.get("threshold", 0) > 1:
             return "multisig"
