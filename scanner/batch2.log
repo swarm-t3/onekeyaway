@@ -1,0 +1,9 @@
+125 protocols, 541 addresses
+0
+100
+200
+300
+400
+500
+Counter({'multisig, no timelock': 155, 'no owner/admin found': 142, 'no owner/admin found (upgradeable, admin unknown)': 59, 'SINGLE KEY owner': 38, 'timelock / multisig': 36, 'SINGLE KEY can upgrade': 26, 'controlled by unrecognised contract': 21, 'no code': 1})
+done

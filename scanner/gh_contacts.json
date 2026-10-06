@@ -1,0 +1,330 @@
+{
+ "EigenCloud": [
+  [
+   "Layr-Labs",
+   null,
+   "https://www.eigenlabs.org",
+   "eigenlabs"
+  ]
+ ],
+ "Vesper": [
+  [
+   "vesperfi",
+   null,
+   "https://vesper.finance/",
+   "vesperfi"
+  ]
+ ],
+ "Bitway Earn": [
+  [
+   "bitwaylabs",
+   "contact@bitway.com",
+   "https://bitway.com",
+   "bitwayofficial"
+  ]
+ ],
+ "AUTOfinance": [
+  [
+   "Tokemak",
+   null,
+   "https://app.auto.finance/",
+   "autopools"
+  ]
+ ],
+ "Lisk Bridge": [
+  [
+   "LiskHQ",
+   null,
+   "https://lisk.com/",
+   null
+  ]
+ ],
+ "Infrared Finance": [
+  [
+   "infrared-dao",
+   "gm@infrared.finance",
+   "https://infrared.finance",
+   "infraredfinance"
+  ]
+ ],
+ "GoldFinger": [
+  [
+   "GoldFingerRWA",
+   null,
+   "https://goldfinger.finance/",
+   "GoldFingerRWA"
+  ]
+ ],
+ "Proxy": [
+  [
+   "Proxy-Protocol",
+   "hello@btcproxy.io",
+   "btcproxy.io",
+   "BTC_proxy"
+  ]
+ ],
+ "MorpheusAI": [
+  [
+   "MorpheusAIs",
+   "MorpheusOrg@Proton.me",
+   "https://mor.org/",
+   "MorpheusAIs"
+  ]
+ ],
+ "Piku Finance": [
+  [
+   "piku-co",
+   "info@piku.co",
+   "https://piku.co",
+   "piku_dao"
+  ]
+ ],
+ "Rain": [
+  [
+   "rain1-labs",
+   "dev@rain.one",
+   "https://www.rain.one",
+   "Rain__Protocol"
+  ]
+ ],
+ "GAIB": [
+  [
+   "gaib-ai",
+   null,
+   "https://www.gaib.ai/",
+   "gaib_ai"
+  ]
+ ],
+ "Superform": [
+  [
+   "superform-xyz",
+   null,
+   "https://superform.xyz/",
+   "superformxyz"
+  ]
+ ],
+ "cBridge": [
+  [
+   "celer-network",
+   null,
+   "https://www.celer.network",
+   null
+  ]
+ ],
+ "Belt Finance": [
+  [
+   "BeltFi",
+   "support@belt.fi",
+   "https://belt.fi",
+   null
+  ]
+ ],
+ "pNetwork": [
+  [
+   "pnetwork-association",
+   null,
+   "https://pnetwork-association.org/",
+   null
+  ]
+ ],
+ "BiFi": [
+  [
+   "bifrost-platform",
+   "dev@thebifrost.io",
+   "https://bifrostnetwork.com",
+   "bifrost_network"
+  ]
+ ],
+ "Harmonix Finance": [
+  [
+   "harmonixfi",
+   "hello@harmonix.fi",
+   "https://harmonix.fi/",
+   "harmonixfi"
+  ]
+ ],
+ "Hakka Finance": [
+  [
+   "hakkafinance",
+   null,
+   "https://hakka.finance",
+   null
+  ]
+ ],
+ "Superfluid": [
+  [
+   "superfluid-finance",
+   "info@superfluid.finance",
+   "https://www.superfluid.finance/",
+   null
+  ]
+ ],
+ "Pickle": [
+  [
+   "pickle-finance",
+   null,
+   "https://pickle.finance/",
+   "picklefinance"
+  ]
+ ],
+ "Bunny": [
+  [
+   "PancakeBunny-finance",
+   "hello@pancakebunny.finance",
+   "https://pancakebunny.finance",
+   "PancakeBunnyFin"
+  ]
+ ],
+ "Bio Protocol": [
+  [
+   "bio-xyz",
+   "info@bio.xyz",
+   "https://bio.xyz",
+   "bio_xyz"
+  ]
+ ],
+ "Gamma": [
+  [
+   "GammaStrategies",
+   null,
+   "https://gamma.xyz/",
+   "GammaStrategies"
+  ]
+ ],
+ "Yala": [
+  [
+   "yalaorg",
+   "support@yala.org",
+   "https://yala.org/",
+   null
+  ]
+ ],
+ "Ledgity Yield": [
+  [
+   "LedgityLabs",
+   "contact@ledgity.finance",
+   "https://ledgity.finance/",
+   "LedgityYield"
+  ]
+ ],
+ "LayerBank": [
+  [
+   "layerbank",
+   "dev@layerbank.finance",
+   "https://layerbank.finance",
+   "LayerBankFi"
+  ]
+ ],
+ "MDEX": [
+  [
+   "mdexSwap",
+   null,
+   "mdex.com",
+   "Mdextech"
+  ]
+ ],
+ "Overtime": [
+  [
+   "thales-markets",
+   null,
+   "https://overtime.io/",
+   "overtime_io"
+  ]
+ ],
+ "Hemi": [
+  [
+   "hemilabs",
+   "hemi-info@hemi.xyz",
+   "https://hemi.xyz",
+   "hemi_xyz"
+  ]
+ ],
+ "xToken": [
+  [
+   "xtokenmarket",
+   null,
+   "https://xtokenterminal.io",
+   "xtokenterminal"
+  ]
+ ],
+ "Clipper": [
+  [
+   "shipyard-software",
+   null,
+   "https://shipyardsoftware.org/",
+   null
+  ]
+ ],
+ "Cover Protocol": [
+  [
+   "CoverProtocol",
+   null,
+   "https://www.coverprotocol.com/",
+   "CoverProtocol"
+  ]
+ ],
+ "Turtle Club": [
+  [
+   "Turtle-DAO",
+   "contact@turtle.xyz",
+   "https://turtle.xyz/",
+   null
+  ]
+ ],
+ "PinkSwap": [
+  [
+   "pinkmoonfinance",
+   null,
+   "https://www.pinksale.finance",
+   null
+  ]
+ ],
+ "RadioShack": [
+  [
+   "radioshackswap",
+   null,
+   "https://www.radioshack.org",
+   null
+  ]
+ ],
+ "SingularityDAO": [
+  [
+   "Singularity-DAO",
+   null,
+   "https://singularitydao.ai/",
+   null
+  ]
+ ],
+ "Knit Finance": [
+  [
+   "KnitFinance",
+   null,
+   "https://knit.finance",
+   null
+  ]
+ ],
+ "Almanak": [
+  [
+   "almanak-co",
+   "gm@almanak.co",
+   "https://almanak.co",
+   "almanak"
+  ]
+ ],
+ "SteakBank Finance": [
+  [
+   "steakbankfinance",
+   "admin@steakbank.finance",
+   "https://steakbank.finance/",
+   "steakbank"
+  ]
+ ],
+ "xSigma": [
+  [
+   "xSigmaLabs",
+   null,
+   "https://xsigma.com/",
+   "xSigma5"
+  ]
+ ]
+}

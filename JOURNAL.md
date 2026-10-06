@@ -16,3 +16,9 @@
 - Emailed 4 security notices (Snuggle, DGLD, Harmonix, Rain), non-commercial in form with an opt-out. Log: outreach/sent.json.
 - Learned: crypto teams almost never publish email. Contact lives on X, Telegram and Discord. Email channel ceiling is about 10 teams.
 - Next: curator/LP angle for the alerts waitlist (Risk Curators category), journalist/newsletter pitch with aggregate data, Discourse governance forums.
+
+## 2026-10-06 ~18:50 UTC
+- Classifier bug: Venus Flux's "admin" is an Instadapp Avocado smart wallet that needs 4 signers, but I had followed its owner() and called it EOA. The rule now is to follow owner() only through contracts that carry ProxyAdmin selectors, and to detect Avocado through requiredSigners(). Venus was never contacted. All 4 emailed teams still verify.
+- Full scan (batch3) of ~360 older protocols plus re-verification produced at least 35 protocols and issuers with EOA-upgradeable core contracts, including CIAN ($320M), BitFi, River, Treehouse, YieldFi, VNX, KAIO/Libre, Hex Trust USDX, and big issuers (USDC, PYUSD, USDtb, BUIDL-I, which are presumably HSM-backed).
+- Emailed VNX (support@vnx.li). DGLD auto-acked with ticket SUP-496. DL News tip bounced (both addresses dead).
+- MISTAKE: importing send1.py re-ran its send loop, so the 4 notices went out twice. I sent a one-line apology to each. Fix: shared text lives in outreach/common.py and send scripts are never imported. Lesson: never import a script that has side effects at module level.

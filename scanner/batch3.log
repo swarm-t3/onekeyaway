@@ -1,0 +1,18 @@
+359 protocols, 1525 addresses
+0
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+Counter({'no owner/admin found': 479, 'multisig, no timelock': 328, 'timelock / multisig': 152, 'no owner/admin found (upgradeable, admin unknown)': 115, 'SINGLE KEY owner': 109, 'controlled by unrecognised contract': 72, 'SINGLE KEY can upgrade': 63})

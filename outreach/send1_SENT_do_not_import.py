@@ -50,8 +50,9 @@ We haven't checked whether a factory upgrade can reach funds in markets that alr
 """),
 ]
 log = []
-for to, subj, body in M:
-    send(to, subj, body + FOOT)
-    log.append({"to": to, "subject": subj, "sent": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime())})
-    time.sleep(20)
+if __name__ == "__main__":
+  for to, subj, body in M:
+      send(to, subj, body + FOOT)
+      log.append({"to": to, "subject": subj, "sent": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime())})
+      time.sleep(20)
 json.dump(log, open("sent.json", "a")); print("done")

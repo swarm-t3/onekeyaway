@@ -1,0 +1,2116 @@
+[
+ {
+  "chain": "ethereum",
+  "address": "0xc139190f447e929f090edeb554d95abb8b18ac1c",
+  "upgradeable": true,
+  "powers": [
+   "mint",
+   "pause",
+   "burnFrom"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x3c405f68d5c6ece868e5646cac926679839acd68",
+     "via": {
+      "type": "EOA",
+      "address": "0xd93826bb299765c87d13aeba2a7e5d9b27a03956"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0xd93826bb299765c87d13aeba2a7e5d9b27a03956"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Ethena USDe",
+  "tvl": 4963416192.233267,
+  "url": "https://www.app.ethena.fi/join/3y20d",
+  "twitter": "ethena",
+  "category": "Basis Trading",
+  "github": null,
+  "name": "USDtb",
+  "ctx": "'0xc139190f447e929f090edeb554d95abb8b18ac1c', // USDtb"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x6a9da2d710bb9b700acde7cb81f10f1ff8c89041",
+  "upgradeable": true,
+  "powers": [
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0xe01605f6b6dc593b7d2917f4a0940db2a625b09e"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Grove Finance",
+  "tvl": 1182372590.9980602,
+  "url": "https://data.grove.finance/",
+  "twitter": "grovedotfinance",
+  "category": "Onchain Capital Allocator",
+  "github": null,
+  "name": "BlackRock USD Institutional Digital Liquidity Fund - I Class",
+  "ctx": "'0x6a9DA2D710BB9B700acde7Cb81F10F1fF8C89041', // BUIDL-I"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x43415eb6ff9db7e26a15b704e7a3edce97d31c4e",
+  "upgradeable": true,
+  "powers": [
+   "mint",
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0xb9d285dcad879513dc9c1a3b2e0cccb21c3c2146",
+     "via": {
+      "type": "EOA",
+      "address": "0xad309bb6f13074128b4f23ef9ea2fe8552afca83"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0xad309bb6f13074128b4f23ef9ea2fe8552afca83"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Invesco USTB",
+  "tvl": 566015006.9103798,
+  "url": "https://superstate.com/",
+  "twitter": "superstatefunds",
+  "category": "RWA",
+  "github": null,
+  "name": "Invesco Short Duration US Government Securities Fund",
+  "ctx": "const USTB = \"0x43415eb6ff9db7e26a15b704e7a3edce97d31c4e\";"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0xc139190f447e929f090edeb554d95abb8b18ac1c",
+  "upgradeable": true,
+  "powers": [
+   "mint",
+   "pause",
+   "burnFrom"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x3c405f68d5c6ece868e5646cac926679839acd68",
+     "via": {
+      "type": "EOA",
+      "address": "0xd93826bb299765c87d13aeba2a7e5d9b27a03956"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0xd93826bb299765c87d13aeba2a7e5d9b27a03956"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Ethena USDtb",
+  "tvl": 488555033.73155475,
+  "url": "https://usdtb.money",
+  "twitter": "ethena",
+  "category": "RWA",
+  "github": null,
+  "name": "USDtb",
+  "ctx": "'0xc139190f447e929f090edeb554d95abb8b18ac1c', // USDtb"
+ },
+ {
+  "chain": "arbitrum",
+  "address": "0x46850ad61c2b7d64d08c9c754f45254596696984",
+  "upgradeable": true,
+  "powers": [
+   "mint",
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0xc94bcf6e1d8b3558e3b62e743630d50497e3851c"
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x3af3e85f4f97de7ad0f000b724fb77fe5ffc024b"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "USD AI",
+  "tvl": 339109199.34530884,
+  "url": "https://usd.ai/",
+  "twitter": "USDai_Official",
+  "category": "RWA",
+  "github": null,
+  "name": "PayPal USD",
+  "ctx": "const PYUSD = \"0x46850aD61C2B7d64d08c9C754F45254596696984\";"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x9fddad44ed6b77e6777dc1b16ee4fcccbaf0a019",
+  "upgradeable": true,
+  "powers": [
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x141aac405e09b20210a39b39d55ad347de394006",
+     "via": {
+      "type": "EOA",
+      "address": "0x8fa9aa69a6e94c1cd49fbf214c833b2911d02553"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x8fa9aa69a6e94c1cd49fbf214c833b2911d02553"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "CIAN Yield Layer",
+  "tvl": 319780549.0773434,
+  "url": "https://yieldlayer.cian.app/vaults/0xB13aa2d0345b0439b064f26B82D8dCf3f508775d?chainId=1&utm_source=TPFDZE",
+  "twitter": "CIAN_protocol",
+  "category": "Yield Aggregator",
+  "github": null,
+  "name": "CIAN yield layer xFBTC",
+  "ctx": "\"0x9fdDAD44eD6b77e6777dC1b16ee4FCcCBaF0A019\","
+ },
+ {
+  "chain": "ethereum",
+  "address": "0xcc7e6de27ddf225e24e8652f62101dab4656e20a",
+  "upgradeable": true,
+  "powers": [
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x7da9c9ba1e7e30a4a12273affeca3434a43b4043",
+     "via": {
+      "type": "EOA",
+      "address": "0x8fa9aa69a6e94c1cd49fbf214c833b2911d02553"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "Safe",
+     "address": "0x9a85fdb1112236577dc756e85868303776c984b1",
+     "threshold": 2,
+     "owners": 3
+    },
+    "risk": "multisig"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "CIAN Yield Layer",
+  "tvl": 319780549.0773434,
+  "url": "https://yieldlayer.cian.app/vaults/0xB13aa2d0345b0439b064f26B82D8dCf3f508775d?chainId=1&utm_source=TPFDZE",
+  "twitter": "CIAN_protocol",
+  "category": "Yield Aggregator",
+  "github": null,
+  "name": "CIAN YIELD Layer uniBTC",
+  "ctx": "\"0xcc7E6dE27DdF225E24E8652F62101Dab4656E20A\","
+ },
+ {
+  "chain": "ethereum",
+  "address": "0xcdfb58c8c859cb3f62ebe9cf2767f9e036c7fb15",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0xd931401b37c3a368505e7ae6de700f2b0ad14ac6"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "BitFi Basis",
+  "tvl": 243933348.69709858,
+  "url": "https://www.bitfi.one",
+  "twitter": "Bitfi_Org",
+  "category": "Basis Trading",
+  "github": null,
+  "name": "BitFi Bitcoin",
+  "ctx": "bfBTC: '0xCdFb58c8C859Cb3F62ebe9Cf2767F9e036C7fb15',"
+ },
+ {
+  "chain": "bsc",
+  "address": "0x623f2774d9f27b59bc6b954544487532ce79d9df",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0xd931401b37c3a368505e7ae6de700f2b0ad14ac6"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "BitFi Basis",
+  "tvl": 243933348.69709858,
+  "url": "https://www.bitfi.one",
+  "twitter": "Bitfi_Org",
+  "category": "Basis Trading",
+  "github": null,
+  "name": "BitFi Bitcoin",
+  "ctx": "asset: '0x623F2774d9f27B59bc6b954544487532CE79d9DF', // bfBTC"
+ },
+ {
+  "chain": "bsc",
+  "address": "0xee6cacddd3a9370d87db581ee6728226883578e5",
+  "upgradeable": true,
+  "powers": [
+   "mint"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x23a15a374b0f5f20625b7d53666df1fe82b2916f"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "PinkSale",
+  "tvl": 162730879.53198773,
+  "url": "https://www.pinksale.finance",
+  "twitter": "pinkecosystem",
+  "category": "Launchpad",
+  "github": null,
+  "name": "Jump Satoshi Token",
+  "ctx": "'0xee6cacddd3a9370d87db581ee6728226883578e5',"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x14d60e7fdc0d71d8611742720e4c50e7a974020c",
+  "upgradeable": true,
+  "powers": [
+   "mint",
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x2bb7b8b4df7fd96baf7cb9a2ce9e292ecd5baf3d",
+     "via": {
+      "type": "EOA",
+      "address": "0x8abc89d9b56dfd90da18e8e18cfac9111100bdd1"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x8abc89d9b56dfd90da18e8e18cfac9111100bdd1"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Bitwise USCC",
+  "tvl": 140942947.3326473,
+  "url": "https://superstate.com/",
+  "twitter": "superstatefunds",
+  "category": "Basis Trading",
+  "github": null,
+  "name": "Bitwise Crypto Carry Fund",
+  "ctx": "const USCC = \"0x14d60e7fdc0d71d8611742720e4c50e7a974020c\";"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0xccfd19e331ffce8506718ec3dddddf9f23029825",
+  "upgradeable": true,
+  "powers": [
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0xd3e87b4b76e6f8bff454aafc2ad3271c5b317d47"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "River Omni-CDP",
+  "tvl": 107944053.00410382,
+  "url": "https://app.riverai.inc/",
+  "twitter": "RiverdotInc",
+  "category": "CeDeFi",
+  "github": null,
+  "name": "satUSD_plus",
+  "ctx": "address: '0xcCFD19e331fFcE8506718ec3DddDDf9f23029825'"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0xad744e7b3ae782b2c6dd6c316332d60ac33d8db2",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x1f11779ad46cbd969a1953087dc8da53def14354",
+     "via": {
+      "type": "EOA",
+      "address": "0x828f86bc497849043d6ddfc9a72ec3aee18f15df"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x6fa5d361ab8165347f636217001e22a7cef09b48"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Treehouse Protocol",
+  "tvl": 74850965.81587504,
+  "url": "https://www.treehouse.finance/",
+  "twitter": "TreehouseFi",
+  "category": "DOR",
+  "github": null,
+  "name": "",
+  "ctx": "const dataVault = '0xaD744e7B3ae782b2c6DD6c316332d60ac33D8Db2'"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x79d4f0232a66c4c91b89c76362016a1707cfbf4f",
+  "upgradeable": true,
+  "powers": [
+   "mint",
+   "pause",
+   "burnFrom"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x817f8afee1a758faf4492f4844b08dcb57658165",
+     "via": {
+      "type": "EOA",
+      "address": "0x45a149f42ff0b77d148d05904dd7577df36a545a"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x45a149f42ff0b77d148d05904dd7577df36a545a"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Frankencoin",
+  "tvl": 64792970.12597367,
+  "url": "https://frankencoin.com",
+  "twitter": "frankencoinzchf",
+  "category": "CDP",
+  "github": [
+   "Frankencoin-ZCHF"
+  ],
+  "name": "VNX Franc",
+  "ctx": "\"0x79d4f0232A66c4c91b89c76362016A1707CFBF4f\", // VCHF"
+ },
+ {
+  "chain": "polygon",
+  "address": "0x6ae96cc93331c19148541d4d2f31363684917092",
+  "upgradeable": true,
+  "powers": [
+   "mint"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0xaa3836e67485b627eb3e3c3a6792c942f75e6d30",
+     "via": {
+      "type": "EOA",
+      "address": "0x3d41487a3c5662ede90d0ee8854f3cc59e8d66ad"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "Safe",
+     "address": "0x100fcc635acf0c22dcdcef49dd93ca94e55f0c71",
+     "threshold": 4,
+     "owners": 6
+    },
+    "risk": "multisig"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Tangible RWA",
+  "tvl": 41628810.36429706,
+  "url": "https://www.tangible.store",
+  "twitter": "tangibleDAO",
+  "category": "RWA",
+  "github": null,
+  "name": "CAVIAR",
+  "ctx": "CAVIAR: '0x6AE96Cc93331c19148541D4D2f31363684917092',"
+ },
+ {
+  "chain": "polygon",
+  "address": "0x7238390d5f6f64e67c3211c343a410e2a3dec142",
+  "upgradeable": true,
+  "powers": [
+   "mint",
+   "burnFrom"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x8d7651fa9b38da16fd0ed97507f0b2721f150700",
+     "via": {
+      "type": "EOA",
+      "address": "0x839aeea3537989ce05ea1b218ab0f25e54cc3b3f"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Tangible RWA",
+  "tvl": 41628810.36429706,
+  "url": "https://www.tangible.store",
+  "twitter": "tangibleDAO",
+  "category": "RWA",
+  "github": null,
+  "name": "Pearl",
+  "ctx": "PEARL: '0x7238390d5f6F64e67c3211C343A410E2A3DEc142',"
+ },
+ {
+  "chain": "polygon",
+  "address": "0x40379a439d4f6795b6fc9aa5687db461677a2dba",
+  "upgradeable": true,
+  "powers": [
+   "mint"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x4f57e583a4c4f6b023577c4a52346414f16cd53b",
+     "via": {
+      "type": "EOA",
+      "address": "0x3d41487a3c5662ede90d0ee8854f3cc59e8d66ad"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x3d41487a3c5662ede90d0ee8854f3cc59e8d66ad"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Tangible RWA",
+  "tvl": 41628810.36429706,
+  "url": "https://www.tangible.store",
+  "twitter": "tangibleDAO",
+  "category": "RWA",
+  "github": null,
+  "name": "Real USD",
+  "ctx": "USDR: '0x40379a439D4F6795B6fc9aa5687dB461677A2dBa',"
+ },
+ {
+  "chain": "polygon",
+  "address": "0x00e8c0e92eb3ad88189e7125ec8825edc03ab265",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x4f57e583a4c4f6b023577c4a52346414f16cd53b",
+     "via": {
+      "type": "EOA",
+      "address": "0x3d41487a3c5662ede90d0ee8854f3cc59e8d66ad"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x3d41487a3c5662ede90d0ee8854f3cc59e8d66ad"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Tangible RWA",
+  "tvl": 41628810.36429706,
+  "url": "https://www.tangible.store",
+  "twitter": "tangibleDAO",
+  "category": "RWA",
+  "github": null,
+  "name": "Wrapped USDR",
+  "ctx": "WUSDR: '0x00e8c0E92eB3Ad88189E7125Ec8825eDc03Ab265',"
+ },
+ {
+  "chain": "avax",
+  "address": "0xcf2ca1b21e6f5da7a2744f89667de4e450791c79",
+  "upgradeable": true,
+  "powers": [
+   "mint"
+  ],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x55413c13dce4b03dee20ec1dd8351691f0c50bdd"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "KAIO",
+  "tvl": 39652722.013633765,
+  "url": "https://www.kaio.xyz/",
+  "twitter": "KAIO_xyz",
+  "category": "RWA",
+  "github": null,
+  "name": "Libre Institutional USD Money Market A1",
+  "ctx": "address: '0xcf2Ca1B21e6f5dA7A2744f89667dE4E450791C79',"
+ },
+ {
+  "chain": "avax",
+  "address": "0xcc777c52ee9ee5a57965a8e56f06211fad34fb3b",
+  "upgradeable": true,
+  "powers": [
+   "mint"
+  ],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x55413c13dce4b03dee20ec1dd8351691f0c50bdd"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "KAIO",
+  "tvl": 39652722.013633765,
+  "url": "https://www.kaio.xyz/",
+  "twitter": "KAIO_xyz",
+  "category": "RWA",
+  "github": null,
+  "name": "Libre SAF VCC - BHM Global Macro Access A1",
+  "ctx": "address: '0xcc777c52ee9Ee5A57965a8E56F06211Fad34Fb3B',"
+ },
+ {
+  "chain": "avax",
+  "address": "0x1b62f1b8b04736e8f9ecc8eeae8b7d5957c74d5d",
+  "upgradeable": true,
+  "powers": [
+   "mint"
+  ],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x55413c13dce4b03dee20ec1dd8351691f0c50bdd"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "KAIO",
+  "tvl": 39652722.013633765,
+  "url": "https://www.kaio.xyz/",
+  "twitter": "KAIO_xyz",
+  "category": "RWA",
+  "github": null,
+  "name": "Libre SAF VCC - Access Private Credit Feeder A",
+  "ctx": "address: '0x1b62F1B8b04736e8F9ECc8eEaE8B7D5957c74d5d',"
+ },
+ {
+  "chain": "avax",
+  "address": "0xc1cd4ccd9e74be61eddd5c06f962657bd5d57af3",
+  "upgradeable": true,
+  "powers": [
+   "mint"
+  ],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x55413c13dce4b03dee20ec1dd8351691f0c50bdd"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "KAIO",
+  "tvl": 39652722.013633765,
+  "url": "https://www.kaio.xyz/",
+  "twitter": "KAIO_xyz",
+  "category": "RWA",
+  "github": null,
+  "name": "Libre SAF VCC - Laser Digital Carry Fund A",
+  "ctx": "address: '0xC1Cd4CCd9E74be61EDdd5C06f962657Bd5D57aF3',"
+ },
+ {
+  "chain": "avax",
+  "address": "0xe5631ccf95350948ba2d4d8c815c05afbfb47a9f",
+  "upgradeable": true,
+  "powers": [
+   "mint"
+  ],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x55413c13dce4b03dee20ec1dd8351691f0c50bdd"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "KAIO",
+  "tvl": 39652722.013633765,
+  "url": "https://www.kaio.xyz/",
+  "twitter": "KAIO_xyz",
+  "category": "RWA",
+  "github": null,
+  "name": "Libre SAF VCC - HL Scope Private Credit Access A",
+  "ctx": "address: '0xe5631cCF95350948Ba2D4d8c815c05AFBfb47A9F',"
+ },
+ {
+  "chain": "avax",
+  "address": "0xbee4274f1c5ee0b30fc5aaa7842a434c35bf6f7b",
+  "upgradeable": true,
+  "powers": [
+   "mint"
+  ],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x55413c13dce4b03dee20ec1dd8351691f0c50bdd"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "KAIO",
+  "tvl": 39652722.013633765,
+  "url": "https://www.kaio.xyz/",
+  "twitter": "KAIO_xyz",
+  "category": "RWA",
+  "github": null,
+  "name": "Libre SAF VCC - Laser Digital Carry Fund B",
+  "ctx": "address: '0xbee4274F1c5EE0B30fC5AAa7842A434C35BF6f7b',"
+ },
+ {
+  "chain": "hyperliquid",
+  "address": "0xbe6727b535545c67d5caa73dea54865b92cf7907",
+  "upgradeable": true,
+  "powers": [
+   "blacklist"
+  ],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0xb4fc973924a91362d301e583e839cdaf4f19cdf8"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Hyperbeat Earn",
+  "tvl": 25088971.742837276,
+  "url": "https://app.hyperbeat.org",
+  "twitter": "0xhyperbeat",
+  "category": "Yield Aggregator",
+  "github": null,
+  "name": "Unit Ethereum",
+  "ctx": "'0xbe6727b535545c67d5caa73dea54865b92cf7907', // UETH"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x7a486f809c952a6f8dec8cb0ff68173f2b8ed56c",
+  "upgradeable": true,
+  "powers": [
+   "mint",
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0xb8ce31ad8bad26e88db17e68f695c64f67ad31eb"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Clearpool TPOOL",
+  "tvl": 20968676.266084615,
+  "url": "https://vaults.clearpool.finance/",
+  "twitter": "ClearpoolFin",
+  "category": "RWA",
+  "github": null,
+  "name": "Hex Trust USD",
+  "ctx": "'0x7a486f809c952a6f8dec8cb0ff68173f2b8ed56c', // USDX"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x445f863df0090f423a6d7005581e30d5841e4d6d",
+  "upgradeable": true,
+  "powers": [
+   "mint"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0xa3cd1dd408711907f5d431941c9bf0af3e31a0b6",
+     "via": {
+      "type": "EOA",
+      "address": "0x74f97f76361f1c4f53fa4575fa368032e0ac0301"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Orbit Bridge",
+  "tvl": 18217207.952765044,
+  "url": "https://bridge.orbitchain.io",
+  "twitter": "Orbit_Chain",
+  "category": "Bridge",
+  "github": [
+   "orbit-chain"
+  ],
+  "name": null,
+  "ctx": "wemix: '0x445F863df0090f423A6D7005581e30d5841e4D6d',"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x649765821d9f64198c905ec0b2b037a4a52bc373",
+  "upgradeable": true,
+  "powers": [
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x12388c005c3e3a88b6d30c55f21e49b747d118cb",
+     "via": {
+      "type": "EOA",
+      "address": "0xe01ea58f6da98488e4c92fd9b3e49607639c5370"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Bancor V3",
+  "tvl": 17477545.382472664,
+  "url": "https://app.bancor.network/",
+  "twitter": "Bancor",
+  "category": "Dexs",
+  "github": null,
+  "name": null,
+  "ctx": "const masterVault = '0x649765821D9f64198c905eC0B2B037a4a52Bc373'"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0xeef417e1d5cc832e619ae18d2f140de2999dd4fb",
+  "upgradeable": true,
+  "powers": [
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x12388c005c3e3a88b6d30c55f21e49b747d118cb",
+     "via": {
+      "type": "EOA",
+      "address": "0xe01ea58f6da98488e4c92fd9b3e49607639c5370"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Bancor V3",
+  "tvl": 17477545.382472664,
+  "url": "https://app.bancor.network/",
+  "twitter": "Bancor",
+  "category": "Dexs",
+  "github": null,
+  "name": null,
+  "ctx": "const networkSettings = '0xeEF417e1D5CC832e619ae18D2F140De2999dD4fB'"
+ },
+ {
+  "chain": "era",
+  "address": "0x7d5b0215ef203d0660bc37d5d09d964fd6b55a1e",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract (unknown)",
+     "address": "0x268980de8ef0e41fc5efe2c929c06adaaca97aa5"
+    },
+    "risk": "unknown"
+   }
+  ],
+  "verdict": "controlled by unrecognised contract",
+  "protocol": "Fulcrom Perps",
+  "tvl": 13818967.027996706,
+  "url": "https://fulcrom.finance",
+  "twitter": "FulcromFinance",
+  "category": "Derivatives",
+  "github": null,
+  "name": null,
+  "ctx": "const ZKSYNC_VAULT_ADDR = '0x7d5b0215EF203D0660BC37d5D09d964fd6b55a1E';"
+ },
+ {
+  "chain": "linea",
+  "address": "0x4e559dbccbe87de66c6a9f3f25231096f24c2e28",
+  "upgradeable": true,
+  "powers": [
+   "setFee/tax"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x301d3f582f7b8ae70a05e373bf54bdded0f54928",
+     "via": {
+      "type": "EOA",
+      "address": "0x944416e5df03ee4c14ec44c01495005564e6b07e"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "YieldFi",
+  "tvl": 11718542.779152667,
+  "url": "https://yield.fi/",
+  "twitter": "getyieldfi",
+  "category": "Yield Aggregator",
+  "github": [
+   "YieldFiLabs"
+  ],
+  "name": "YieldFi yUSD",
+  "ctx": "linea: \"0x4e559dBCCbe87De66c6a9F3f25231096F24c2e28\","
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x2e3c5e514eef46727de1fe44618027a9b70d92fc",
+  "upgradeable": true,
+  "powers": [
+   "setFee/tax"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA (7702)",
+     "address": "0x3c6ecdcdac78b65bdd85985285c1a1d140a79a63",
+     "via": {
+      "type": "EOA (7702)",
+      "address": "0x944416e5df03ee4c14ec44c01495005564e6b07e"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "YieldFi",
+  "tvl": 11718542.779152667,
+  "url": "https://yield.fi/",
+  "twitter": "getyieldfi",
+  "category": "Yield Aggregator",
+  "github": [
+   "YieldFiLabs"
+  ],
+  "name": "YieldFi vyUSD",
+  "ctx": "ethereum: \"0x2e3C5e514EEf46727DE1FE44618027A9b70D92FC\","
+ },
+ {
+  "chain": "base",
+  "address": "0xf4f447e6afa04c9d11ef0e2fc0d7f19c24ee55de",
+  "upgradeable": true,
+  "powers": [
+   "setFee/tax"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA (7702)",
+     "address": "0x915bac42aa13e125ffe46cfe047922ad5bd57df6",
+     "via": {
+      "type": "EOA (7702)",
+      "address": "0x944416e5df03ee4c14ec44c01495005564e6b07e"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "YieldFi",
+  "tvl": 11718542.779152667,
+  "url": "https://yield.fi/",
+  "twitter": "getyieldfi",
+  "category": "Yield Aggregator",
+  "github": [
+   "YieldFiLabs"
+  ],
+  "name": "YieldFi vyUSD",
+  "ctx": "'vyUSD': '0xF4F447E6AFa04c9D11Ef0e2fC0d7f19C24Ee55de',"
+ },
+ {
+  "chain": "linea",
+  "address": "0x168bc4db5dcbeca279983324d3082c47e47569e7",
+  "upgradeable": true,
+  "powers": [
+   "setFee/tax"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0xe1946ad331bb906ddfd30c2dbc8a42e505e60451",
+     "via": {
+      "type": "EOA",
+      "address": "0x944416e5df03ee4c14ec44c01495005564e6b07e"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "YieldFi",
+  "tvl": 11718542.779152667,
+  "url": "https://yield.fi/",
+  "twitter": "getyieldfi",
+  "category": "Yield Aggregator",
+  "github": [
+   "YieldFiLabs"
+  ],
+  "name": "YieldFi vyUSD",
+  "ctx": "linea: \"0x168BC4DB5dcbecA279983324d3082c47e47569E7\","
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x8464f6ecae1ea58ec816c13f964030eab8ec123a",
+  "upgradeable": true,
+  "powers": [
+   "setFee/tax"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA (7702)",
+     "address": "0x058ff1c7f18130a51d8ab6ba4285edc0dbda878f",
+     "via": {
+      "type": "EOA (7702)",
+      "address": "0x944416e5df03ee4c14ec44c01495005564e6b07e"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "YieldFi",
+  "tvl": 11718542.779152667,
+  "url": "https://yield.fi/",
+  "twitter": "getyieldfi",
+  "category": "Yield Aggregator",
+  "github": [
+   "YieldFiLabs"
+  ],
+  "name": "YieldFi yETH",
+  "ctx": "ethereum: \"0x8464F6eCAe1EA58EC816C13f964030eAb8Ec123A\","
+ },
+ {
+  "chain": "arbitrum",
+  "address": "0x3363a85c31cf13a96802e2935724232767420135",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x6f5969bc0f5859b37dadbffbe8eeae2653c737a5",
+     "via": {
+      "type": "EOA",
+      "address": "0x8737acda55a43acccf7ed4a3818663d921ef826b"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Harmonix Finance",
+  "tvl": 8164585.9588,
+  "url": "https://app.harmonix.fi",
+  "twitter": "harmonixfi",
+  "category": "Yield",
+  "github": [
+   "harmonixfi"
+  ],
+  "name": null,
+  "ctx": "arbitrum:  \"0x3363A85c31cf13a96802e2935724232767420135\","
+ },
+ {
+  "chain": "ethereum",
+  "address": "0xc7c8cdd1e9817fc98ad1b05cd3633c6471a9473b",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x4f97223be65dc849538dba395d49fa87b94cc518",
+     "via": {
+      "type": "EOA",
+      "address": "0x8737acda55a43acccf7ed4a3818663d921ef826b"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Harmonix Finance",
+  "tvl": 8164585.9588,
+  "url": "https://app.harmonix.fi",
+  "twitter": "harmonixfi",
+  "category": "Yield",
+  "github": [
+   "harmonixfi"
+  ],
+  "name": null,
+  "ctx": "ethereum:  \"0xC7C8Cdd1E9817Fc98AD1b05cD3633c6471A9473b\","
+ },
+ {
+  "chain": "base",
+  "address": "0x45dc73fb760f2382cfd11e28c0dd0a3a8d3e4c31",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x2f463ba946cb5912568488b20de5547fd80cbf36",
+     "via": {
+      "type": "EOA",
+      "address": "0x8737acda55a43acccf7ed4a3818663d921ef826b"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Harmonix Finance",
+  "tvl": 8164585.9588,
+  "url": "https://app.harmonix.fi",
+  "twitter": "harmonixfi",
+  "category": "Yield",
+  "github": [
+   "harmonixfi"
+  ],
+  "name": null,
+  "ctx": "base:  \"0x45dC73fB760f2382Cfd11e28C0Dd0a3A8d3E4C31\","
+ },
+ {
+  "chain": "hyperliquid",
+  "address": "0x8085c67f122b7c7c7ab06864ac359536640f5e28",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x437031652402b5726f026d73b044eeb260f63672",
+     "via": {
+      "type": "EOA",
+      "address": "0xcb4dd48ad551446d5377544a705f5711cdf48fda"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Harmonix Finance",
+  "tvl": 8164585.9588,
+  "url": "https://app.harmonix.fi",
+  "twitter": "harmonixfi",
+  "category": "Yield",
+  "github": [
+   "harmonixfi"
+  ],
+  "name": null,
+  "ctx": "hyperliquid: \"0x8085C67f122B7C7c7AB06864ac359536640f5E28\""
+ },
+ {
+  "chain": "ethereum",
+  "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "upgradeable": true,
+  "powers": [
+   "mint",
+   "pause",
+   "blacklist"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x807a96288a1a408dbc13de2b1d087d10356395d2"
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0xfcb19e6a322b27c06842a71e8c725399f049ae3a"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Symbiosis",
+  "tvl": 8115655.998207571,
+  "url": "https://symbiosis.finance",
+  "twitter": "symbiosis_fi",
+  "category": "Cross Chain Bridge",
+  "github": [
+   "symbiosis-finance"
+  ],
+  "name": "USD Coin",
+  "ctx": "'0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // USDC"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x44017598f2af1bd733f9d87b5017b4e7c1b28dde",
+  "upgradeable": true,
+  "powers": [
+   "mint",
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x466c7b7b92662f0212cab30bf2ad12a8c366a688",
+     "via": {
+      "type": "EOA",
+      "address": "0x7f5c7596748128fe72e6b353650094646f327569"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Gravity Bridge",
+  "tvl": 8051406.355968765,
+  "url": "https://www.gravitybridge.net",
+  "twitter": "gravity_bridge",
+  "category": "Bridge",
+  "github": [
+   "Gravity-Bridge"
+  ],
+  "name": "pSTAKE Staked ATOM",
+  "ctx": "\"0x44017598f2AF1bD733F9D87b5017b4E7c1B28DDE\", // stkATOM"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0xe4a6f23fb9e00fca037aa0ea0a6954de0a6c53bf",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0xfd33041f1111be9c164dcfc88e61a25b4873f6c2",
+     "via": {
+      "type": "EOA",
+      "address": "0x795b8dc0c4722061abbff6b780a7d76feb2219ba"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x795b8dc0c4722061abbff6b780a7d76feb2219ba"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Aurus",
+  "tvl": 7352864.83403296,
+  "url": "",
+  "twitter": "AurusOfficial",
+  "category": "RWA",
+  "github": null,
+  "name": "tGOLD",
+  "ctx": "'0xe4a6f23fb9e00fca037aa0ea0a6954de0a6c53bf', // TXAU - gold"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x34abce75d2f8f33940c721dca0f562617787bff3",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x3aca1303cd4194ae7b78e7979586751a10b4aed2",
+     "via": {
+      "type": "EOA",
+      "address": "0x795b8dc0c4722061abbff6b780a7d76feb2219ba"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x795b8dc0c4722061abbff6b780a7d76feb2219ba"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Aurus",
+  "tvl": 7352864.83403296,
+  "url": "",
+  "twitter": "AurusOfficial",
+  "category": "RWA",
+  "github": null,
+  "name": "tSILVER",
+  "ctx": "'0x34abce75d2f8f33940c721dca0f562617787bff3', // TXAG - silver"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x19b22dbadc298c359a1d1b59e35f352a2b40e33c",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x9922e2f8a3e31f794cc8045cfa514172683d6bbc",
+     "via": {
+      "type": "EOA",
+      "address": "0x795b8dc0c4722061abbff6b780a7d76feb2219ba"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x795b8dc0c4722061abbff6b780a7d76feb2219ba"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Aurus",
+  "tvl": 7352864.83403296,
+  "url": "",
+  "twitter": "AurusOfficial",
+  "category": "RWA",
+  "github": null,
+  "name": "tPLATINUM",
+  "ctx": "'0x19b22dbadc298c359a1d1b59e35f352a2b40e33c'  // TXPT - platinum"
+ },
+ {
+  "chain": "arbitrum",
+  "address": "0xd8676fbdfa5b56bb2298d452c9768f51e80e34ae",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x6c0db7c063dd28bbf6c4bad43a21169f4565bc41"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Camelot V3",
+  "tvl": 5816635.372585927,
+  "url": "https://camelot.exchange/",
+  "twitter": "CamelotDEX",
+  "category": "Dexs",
+  "github": null,
+  "name": null,
+  "ctx": "xai: { factory: '0xD8676fBdfa5b56BB2298D452c9768f51e80e34AE', fromBlock: 2398999, isAlgebra: true },"
+ },
+ {
+  "chain": "polygon",
+  "address": "0x2080a319a4b11d097050722b6b65d09f754edc83",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0xf8c71776449cfafb108a3ef6f42a4206988065f5",
+     "via": {
+      "type": "EOA",
+      "address": "0x44e3163c55a2e2b4488a284b84ce0288838e1719"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x44e3163c55a2e2b4488a284b84ce0288838e1719"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Blueshift",
+  "tvl": 4817686.059136022,
+  "url": "https://blueshift.fi/",
+  "twitter": "blueshiftfi",
+  "category": "Dexs",
+  "github": [
+   "blueshift-fi"
+  ],
+  "name": null,
+  "ctx": "\"polygon\": \"0x2080A319A4B11D097050722b6b65d09F754EdC83\","
+ },
+ {
+  "chain": "berachain",
+  "address": "0x66611ba2aa5deb46e6138ad21a202b40ece5b6ab",
+  "upgradeable": true,
+  "powers": [
+   "mint",
+   "pause",
+   "burnFrom"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0xe1430d8b06cce13733092ff66f6921dde59c16a6",
+     "via": {
+      "type": "EOA",
+      "address": "0x1765efc6cb49b1414487d8540a11ce2bb0668800"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x1765efc6cb49b1414487d8540a11ce2bb0668800"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Lair Finance",
+  "tvl": 3338459.603202333,
+  "url": "https://lair.fi",
+  "twitter": "LairFinance",
+  "category": "Liquid Staking",
+  "github": null,
+  "name": "Lair BGT Token",
+  "ctx": "restakingManager: '0x66611Ba2aa5deB46e6138aD21a202b40ecE5b6AB',"
+ },
+ {
+  "chain": "berachain",
+  "address": "0x381e9dc031d2667bb61d4ab61e64d520bbd7bffc",
+  "upgradeable": true,
+  "powers": [
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x2cf8faf4a07a0863a2cdcb550e2cdb13f83f270a",
+     "via": {
+      "type": "EOA",
+      "address": "0x1765efc6cb49b1414487d8540a11ce2bb0668800"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x1765efc6cb49b1414487d8540a11ce2bb0668800"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Lair Finance",
+  "tvl": 3338459.603202333,
+  "url": "https://lair.fi",
+  "twitter": "LairFinance",
+  "category": "Liquid Staking",
+  "github": null,
+  "name": null,
+  "ctx": "lairBGTManager: '0x381E9DC031D2667BB61d4Ab61e64D520Bbd7bFfC',"
+ },
+ {
+  "chain": "bsc",
+  "address": "0xedbcdd0a45fd8eba749ffc10205c65cea54336d5",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0xfb9c890d9154813e2508ab39f503e756ca5596ae",
+     "via": {
+      "type": "EOA",
+      "address": "0x1fd4e4b4fe175284e17d84d5ec09cbfb60d859eb"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x1fd4e4b4fe175284e17d84d5ec09cbfb60d859eb"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "RateX DEX",
+  "tvl": 2998696.2452908624,
+  "url": "https://app.rate-x.io",
+  "twitter": "RateX_Dex",
+  "category": "Yield",
+  "github": null,
+  "name": "WrapSlisBNB",
+  "ctx": "return api.sumTokens({ tokensAndOwners: [[\"0x77c9b49a58325131D08F9dC120388f20c57c2572\", \"0xEDBcdD0A45Fd8EBa749fFc10205c65CeA54336D5\"]] })"
+ },
+ {
+  "chain": "base",
+  "address": "0x3a46ed8fceb6ef1ada2e4600a522ae7e24d2ed18",
+  "upgradeable": true,
+  "powers": [
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0xd463d3d8333b7ad6a14d00e1700c80af5a37f751"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "SoSoValue Basis",
+  "tvl": 2934578.505738454,
+  "url": "https://ssi.sosovalue.com/share/MAG7.ssi/0TC050BY?tid=ssi-invite-share-0TC050BY",
+  "twitter": "SoSoValueCrypto",
+  "category": "Basis Trading",
+  "github": null,
+  "name": "USSI",
+  "ctx": "const USSI_CONTRACT = '0x3a46ed8FCeb6eF1ADA2E4600A522AE7e24D2Ed18';"
+ },
+ {
+  "chain": "arbitrum",
+  "address": "0x2032f104069cc3023c0a0b6874f8a5fb21a5e511",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x1040595d81463046ac39e39e53c6f66ff111a222"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Parasail",
+  "tvl": 1996089.1708041418,
+  "url": "https://www.parasail.network/",
+  "twitter": "parasailnetwork",
+  "category": "Restaking",
+  "github": null,
+  "name": null,
+  "ctx": "const ATH_HELPER_CONTRACT = '0x2032F104069CC3023C0A0b6874F8A5fB21A5E511';"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x4aae9823fb4c70490f1d802fc697f3fff8d5cbe3",
+  "upgradeable": true,
+  "powers": [
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x3d9d8c08dc16aa104b5b24abdd1ad857e2c0d8c5",
+     "via": {
+      "type": "EOA",
+      "address": "0x3cb68a6762041aa05e762814a8791ca9d98e79a0"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x3cb68a6762041aa05e762814a8791ca9d98e79a0"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Interest Protocol",
+  "tvl": 1974978.9240118556,
+  "url": "",
+  "twitter": "InterestDeFi",
+  "category": "CDP",
+  "github": null,
+  "name": null,
+  "ctx": "const VaultController = \"0x4aaE9823Fb4C70490F1d802fC697F3ffF8D5CbE3\""
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x2a54ba2964c8cd459dc568853f79813a60761b58",
+  "upgradeable": true,
+  "powers": [
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x3d9d8c08dc16aa104b5b24abdd1ad857e2c0d8c5",
+     "via": {
+      "type": "EOA",
+      "address": "0x3cb68a6762041aa05e762814a8791ca9d98e79a0"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x3cb68a6762041aa05e762814a8791ca9d98e79a0"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Interest Protocol",
+  "tvl": 1974978.9240118556,
+  "url": "",
+  "twitter": "InterestDeFi",
+  "category": "CDP",
+  "github": null,
+  "name": "USDI Token",
+  "ctx": "return sumTokens2({ api, owner: '0x2A54bA2964C8Cd459Dc568853F79813a60761B58', tokens: [ADDRESSES.ethereum.USDC] })"
+ },
+ {
+  "chain": "optimism",
+  "address": "0x889be273be5f75a177f9a1d00d84d607d75fb4e1",
+  "upgradeable": true,
+  "powers": [
+   "pause"
+  ],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA (7702)",
+     "address": "0x2db08783f13c4225a1963b2437f0d459a5bcb4d8",
+     "via": {
+      "type": "EOA (7702)",
+      "address": "0x3cb68a6762041aa05e762814a8791ca9d98e79a0"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA (7702)",
+     "address": "0x3cb68a6762041aa05e762814a8791ca9d98e79a0"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Interest Protocol",
+  "tvl": 1974978.9240118556,
+  "url": "",
+  "twitter": "InterestDeFi",
+  "category": "CDP",
+  "github": null,
+  "name": "opUSDI Token",
+  "ctx": "const USDI = \"0x889be273BE5F75a177f9a1D00d84D607d75fB4e1\""
+ },
+ {
+  "chain": "optimism",
+  "address": "0x7131ff92a3604966d7d96ccc9d596f7e9435195c",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA (7702)",
+     "address": "0x2db08783f13c4225a1963b2437f0d459a5bcb4d8",
+     "via": {
+      "type": "EOA (7702)",
+      "address": "0x3cb68a6762041aa05e762814a8791ca9d98e79a0"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA (7702)",
+     "address": "0x085909388fc0ce9e5761ac8608af8f2f52cb8b89"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Interest Protocol",
+  "tvl": 1974978.9240118556,
+  "url": "",
+  "twitter": "InterestDeFi",
+  "category": "CDP",
+  "github": null,
+  "name": "Wrapped Uniswap V3 Position",
+  "ctx": "const positionWrapper = \"0x7131FF92a3604966d7D96CCc9d596F7e9435195c\".toLowerCase()"
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x05498574bd0fa99eecb01e1241661e7ee58f8a85",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0x3d9d8c08dc16aa104b5b24abdd1ad857e2c0d8c5",
+     "via": {
+      "type": "EOA",
+      "address": "0x3cb68a6762041aa05e762814a8791ca9d98e79a0"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "Contract (unknown)",
+     "address": "0x266d1020a84b9e8b0ed320831838152075f8c4ca"
+    },
+    "risk": "unknown"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Interest Protocol",
+  "tvl": 1974978.9240118556,
+  "url": "",
+  "twitter": "InterestDeFi",
+  "category": "CDP",
+  "github": null,
+  "name": "Capped Balancer",
+  "ctx": "const VaultController = \"0x05498574BD0Fa99eeCB01e1241661E7eE58F8a85\""
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x4e6ef371c9cdde8c3e6716affeebad14c8c62d0b",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "beacon owner (can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x21fe3e26e824783ca7e374355a8d30ae8bbf6e37"
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x21fe3e26e824783ca7e374355a8d30ae8bbf6e37"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Peapods Finance",
+  "tvl": 1797389.9092895004,
+  "url": "https://peapods.finance",
+  "twitter": "PeapodsFinance",
+  "category": "Yield",
+  "github": null,
+  "name": null,
+  "ctx": "ethereum: { indexManagerV3: \"0x6eFFcF94993d6a6081204fc3C30473468Eb7666E\", indexManagerV2: \"0x0Bb39ba2eE60f825348676f9a87B7CD1e3B4AE6B\", leve"
+ },
+ {
+  "chain": "arbitrum",
+  "address": "0x3f2257b6f1fd055aee020027740f266127e8e2b0",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "beacon owner (can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x21fe3e26e824783ca7e374355a8d30ae8bbf6e37"
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x21fe3e26e824783ca7e374355a8d30ae8bbf6e37"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Peapods Finance",
+  "tvl": 1797389.9092895004,
+  "url": "https://peapods.finance",
+  "twitter": "PeapodsFinance",
+  "category": "Yield",
+  "github": null,
+  "name": null,
+  "ctx": "arbitrum: { indexManagerV3: \"0x64511ccE99ab01A6dD136207450eA81263b14FD8\", indexManagerV2: \"0x0Bb39ba2eE60f825348676f9a87B7CD1e3B4AE6B\", leve"
+ },
+ {
+  "chain": "base",
+  "address": "0x31e35550b15b2dfd267edfb39dd9f3cd1c6ab82d",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "beacon owner (can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x21fe3e26e824783ca7e374355a8d30ae8bbf6e37"
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner() (UUPS: can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0x21fe3e26e824783ca7e374355a8d30ae8bbf6e37"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Peapods Finance",
+  "tvl": 1797389.9092895004,
+  "url": "https://peapods.finance",
+  "twitter": "PeapodsFinance",
+  "category": "Yield",
+  "github": null,
+  "name": null,
+  "ctx": "base: { indexManagerV3: \"0x556059e80CB0073D4A9547081Cf0f80cBB94ec30\", indexManagerV2: \"0x0Bb39ba2eE60f825348676f9a87B7CD1e3B4AE6B\", leverage"
+ },
+ {
+  "chain": "bsc",
+  "address": "0xb883ee478d3b7fea8a5357a3c3e27e2d2292b1d2",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0xd1945acfe40e0a2941d24fc39fb57e5790780be2",
+     "via": {
+      "type": "EOA",
+      "address": "0x587006c6ba7ce26991bf7fd6698a7561578ac58a"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x587006c6ba7ce26991bf7fd6698a7561578ac58a"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Mitosis",
+  "tvl": 1417692.8359238154,
+  "url": "https://mitosis.org",
+  "twitter": "MitosisOrg",
+  "category": "Onchain Capital Allocator",
+  "github": [
+   "mitosis-org"
+  ],
+  "name": null,
+  "ctx": "arbitrum: \"0xb883ee478d3b7fea8a5357a3c3e27e2d2292b1d2\","
+ },
+ {
+  "chain": "linea",
+  "address": "0xcd32876b9b483eb75e8ca74935e4b51725f33a91",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0xb883ee478d3b7fea8a5357a3c3e27e2d2292b1d2",
+     "via": {
+      "type": "EOA",
+      "address": "0x587006c6ba7ce26991bf7fd6698a7561578ac58a"
+     }
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "EOA",
+     "address": "0x587006c6ba7ce26991bf7fd6698a7561578ac58a"
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Mitosis",
+  "tvl": 1417692.8359238154,
+  "url": "https://mitosis.org",
+  "twitter": "MitosisOrg",
+  "category": "Onchain Capital Allocator",
+  "github": [
+   "mitosis-org"
+  ],
+  "name": null,
+  "ctx": "linea: \"0xcd32876b9b483eb75e8ca74935e4b51725f33a91\","
+ },
+ {
+  "chain": "ethereum",
+  "address": "0x4c3c78cebc9cc87436deed2782998bc002f2b69f",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "EOA",
+     "address": "0xc413acbb126fa228d7e3d1943ba506b507c91af7"
+    },
+    "risk": "single-key"
+   },
+   {
+    "role": "owner()",
+    "controller": {
+     "type": "Timelock",
+     "address": "0x63d7a70c17a1fca27dc4100bc737a0dbeb52a5b2",
+     "delay_s": 172800
+    },
+    "risk": "timelock"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "LendFlare",
+  "tvl": 1268911.1226345773,
+  "url": "",
+  "twitter": "LendFlareOffic",
+  "category": "Lending",
+  "github": null,
+  "name": null,
+  "ctx": "const CONVEX_BOOSTER_PROXY = `0x4C3c78cEbc9Cc87436dEEd2782998bC002F2B69f`;"
+ },
+ {
+  "chain": "polygon",
+  "address": "0x03f490ae5b59e428e6692059d0dca1b87ed42ae1",
+  "upgradeable": true,
+  "powers": [],
+  "controls": [
+   {
+    "role": "proxy admin (can upgrade)",
+    "controller": {
+     "type": "Contract->EOA",
+     "address": "0xdb383636e902702d77758671c779ee732c1a02d3",
+     "via": {
+      "type": "EOA",
+      "address": "0x7477c8f7205448c631092911164d1903a6b844ba"
+     }
+    },
+    "risk": "single-key"
+   }
+  ],
+  "verdict": "SINGLE KEY can upgrade",
+  "protocol": "Kromatika",
+  "tvl": 1255168.2481838882,
+  "url": "https://app.kromatika.finance/limitorder#/pool",
+  "twitter": "KromatikaFi",
+  "category": "Dexs",
+  "github": [
+   "Kromatika-Finance"
+  ],
+  "name": "Kromatika Position",
+  "ctx": "position: \"0x03F490aE5b59E428E6692059d0Dca1B87ED42aE1\","
+ }
+]

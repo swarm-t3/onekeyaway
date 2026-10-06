@@ -1,0 +1,54 @@
+{
+ "Aurus": [],
+ "Bancor V3": [],
+ "BitFi Basis": [],
+ "Bitwise USCC": [],
+ "Blueshift": [],
+ "CIAN Yield Layer": [],
+ "Camelot V3": [],
+ "Clearpool TPOOL": [],
+ "Ethena USDe": [],
+ "Ethena USDtb": [],
+ "Frankencoin": [
+  "hello@frankencoin.com",
+  "info@frankencoin.com",
+  "media@frankencoin.com"
+ ],
+ "Gravity Bridge": [],
+ "Grove Finance": [
+  "basin@grove.finance",
+  "contact@grove.finance"
+ ],
+ "Harmonix Finance": [
+  "hello@harmonix.fi"
+ ],
+ "Hyperbeat Earn": [
+  "contact@hyperbeat.org"
+ ],
+ "Interest Protocol": [],
+ "Invesco USTB": [],
+ "KAIO": [],
+ "Kromatika": [
+  "mail@kromatika.finance"
+ ],
+ "Lair Finance": [],
+ "LendFlare": [],
+ "Mitosis": [],
+ "Orbit Bridge": [
+  "help@orbitchain.io"
+ ],
+ "Parasail": [],
+ "Peapods Finance": [],
+ "PinkSale": [],
+ "RateX DEX": [],
+ "River Omni-CDP": [],
+ "SoSoValue Basis": [],
+ "Symbiosis": [],
+ "Tangible RWA": [],
+ "Treehouse Protocol": [],
+ "USD AI": [
+  "hello@usd.ai",
+  "you@company.com"
+ ],
+ "YieldFi": []
+}
