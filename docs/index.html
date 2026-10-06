@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OneKeyAway: is your DeFi protocol one stolen key away from a drain?</title>
+<meta name="description" content="Free check: who can upgrade, mint or pause a smart contract. An EOA, a 1-of-n Safe, a real multisig, or a timelock. Results from 480 DeFi tokens.">
+<style>
+:root{--bg:#0d1117;--fg:#e6edf3;--mut:#8b949e;--card:#161b22;--bd:#30363d;--red:#ff6b6b;--amb:#f0b429;--grn:#3fb950;--acc:#58a6ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 -apple-system,Segoe UI,Roboto,sans-serif}
+.w{max-width:980px;margin:0 auto;padding:24px}h1{font-size:2.1em;line-height:1.2;margin:.3em 0}h2{margin-top:2em;border-bottom:1px solid var(--bd);padding-bottom:.3em}
+a{color:var(--acc)}.mut{color:var(--mut)}.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:18px;margin:14px 0}
+input,select,button{font:inherit;padding:10px;border-radius:8px;border:1px solid var(--bd);background:#0d1117;color:var(--fg)}
+button{background:var(--acc);color:#000;border:0;font-weight:600;cursor:pointer}input[type=text],input[type=email]{width:100%}
+.row{display:flex;gap:8px;flex-wrap:wrap}.row>*{flex:1}.row>select,.row>button{flex:0 0 auto}
+table{width:100%;border-collapse:collapse;font-size:.88em}td,th{border-bottom:1px solid var(--bd);padding:6px;text-align:left;vertical-align:top}
+.red{color:var(--red);font-weight:600}.amb{color:var(--amb);font-weight:600}.grn{color:var(--grn);font-weight:600}
+code{background:#21262d;padding:1px 5px;border-radius:4px;font-size:.9em;word-break:break-all}.stats{display:flex;gap:12px;flex-wrap:wrap}
+.stat{flex:1;min-width:150px;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px}.stat b{font-size:1.8em;display:block}
+.price{font-size:1.6em;font-weight:700}.tiers{display:flex;gap:14px;flex-wrap:wrap}.tiers .card{flex:1;min-width:260px}
+#out pre{white-space:pre-wrap;font-size:.85em}
+</style>
+</head>
+<body><div class="w">
+<p class="mut">OneKeyAway · on-chain admin-key exposure checks</p>
+<h1>Is your protocol one stolen key away from a drain?</h1>
+<p>In the first eight months of 2026, DeFi lost at least <b>$1.3B</b> to hacks, and <b>leaked private keys and admin access overtook smart contract bugs as the top cause</b> (<a href="https://hackmag.com/news/defi-private-keys">source</a>). Wasabi Protocol lost about $4.5M in April because one deployer EOA could upgrade everything (<a href="https://www.coindesk.com/tech/2026/04/30/wasabi-protocol-drained-for-usd4-5-million-in-apparent-admin-key-compromise">CoinDesk</a>, <a href="https://halborn.com/blog/post/explained-the-wasabi-protocol-hack-april-2026">Halborn</a>).</p>
+<p>An audit checks the code. It doesn't tell you <b>who holds the keys</b>. OneKeyAway does that: for any contract it reads the proxy admin, the beacon and <code>owner()</code>, and it follows ProxyAdmins and Safes down to the keys that actually sign.</p>
+
+<div class="card" id="check">
+<h3 style="margin-top:0">Free check: who controls this contract?</h3>
+<div class="row"><select id="chain"></select><input type="text" id="addr" placeholder="0x… contract address"><button onclick="runCheck()">Check</button></div>
+<div id="out" class="mut" style="margin-top:10px">Runs in your browser over public RPC. Nothing is sent to us.</div>
+</div>
+
+<h2>What we found in 480 DeFi tokens</h2>
+<p class="mut">We took every DeFi protocol on <a href="https://defillama.com">DefiLlama</a> with at least $300k TVL that lists an EVM governance or protocol token on one of 15 chains, then read each token's control path on-chain. Scanned 2026-10-06. These are public on-chain facts, and each address links to a block explorer so you can check it. A single-key owner is not automatically dangerous: what matters is what that owner can call. Upgrade rights and mint rights are the serious cases.</p>
+<div class="stats" id="stats"></div>
+<p><label><input type="checkbox" id="onlyrisk" checked onchange="render()"> Show single-key cases only</label> · <input type="text" id="q" placeholder="filter by protocol" style="width:220px" oninput="render()"></p>
+<div style="overflow-x:auto"><table id="tbl"></table></div>
+
+<h2 id="pricing">Fix it before someone else finds it</h2>
+<div class="tiers">
+<div class="card"><h3>Permission Map</h3><div class="price">$99</div><p class="mut">USDT, one-off</p>
+<ul><li>Every contract in your protocol (up to 25) mapped: who can upgrade, pause, mint, set oracles, or move funds</li><li>Each role traced to the keys that sign it: EOA, Safe m/n with signer types, timelock delay</li><li>A ranked list of single points of failure</li><li>Delivered as a PDF and JSON within 24h</li></ul></div>
+<div class="card"><h3>Key Hardening Sprint</h3><div class="price">$490</div><p class="mut">USDT, one-off</p>
+<ul><li>Everything in the Permission Map</li><li>A migration plan: Safe thresholds, TimelockController delays, role splits (guardian vs. upgrader)</li><li>Ready-to-run Foundry or Hardhat scripts for the ownership transfers, plus a dry-run on a fork</li><li>A key-ceremony checklist and an incident runbook for a compromised key</li><li>Done by engineers who have built and run DeFi protocols since 2018</li></ul></div>
+<div class="card"><h3>Admin-change alerts</h3><div class="price">$19<span style="font-size:.5em">/mo</span></div><p class="mut">Waitlist. First month free for early sign-ups.</p>
+<ul><li>Email or Telegram alert within minutes when any contract you depend on is upgraded, changes owner, or changes a Safe threshold</li><li>For funds, LPs, integrators and DAOs watching the protocols they hold</li><li>Up to 50 contracts</li></ul></div>
+</div>
+<div class="card" id="order">
+<h3 style="margin-top:0">Order or join the waitlist</h3>
+<form id="f" onsubmit="return sub(event)">
+<div class="row"><input type="email" name="email" required placeholder="your email"><select name="plan"><option>Permission Map ($99)</option><option>Key Hardening Sprint ($490)</option><option selected>Admin-change alerts waitlist ($19/mo)</option></select></div>
+<p><input type="text" name="protocol" placeholder="protocol name or contract addresses (optional)"></p>
+<input type="text" name="_honey" style="display:none"><button>Send</button> <span id="fs" class="mut"></span>
+</form>
+<p><b>How to pay:</b> send <b>USDT on Arbitrum One</b> to <code>0x36c37d1b47737ba2b2a2cf1b5bc38509516b222f</code>, then email the transaction hash and your protocol name to <a href="mailto:megafi.app1+onekeyaway@gmail.com">megafi.app1+onekeyaway@gmail.com</a>. Check the chain and token before you send. Work starts once the payment confirms, and if we can't deliver, you get a full refund. Card payment is coming soon.</p>
+</div>
+
+<h2>FAQ</h2>
+<p><b>Is this an audit?</b> No. We don't review your code logic. We map who holds the power to change it, which is the cause of most 2026 losses.</p>
+<p><b>Why publish this table?</b> Everything in it is readable on-chain by anyone, attackers included. Publishing it lets users and teams see it too. If your protocol is listed and you have fixed it, email us and we'll re-scan within 24h. If you think a row is wrong, tell us and we'll correct it.</p>
+<p><b>Source?</b> The scanner is open source: <a href="https://github.com/swarm-t3/onekeyaway">github.com/swarm-t3/onekeyaway</a>.</p>
+<p class="mut" style="margin-top:3em">OneKeyAway · contact <a href="mailto:megafi.app1+onekeyaway@gmail.com">megafi.app1+onekeyaway@gmail.com</a> · Not financial or legal advice.</p>
+</div>
+<script>
+const RPC={ethereum:"https://ethereum-rpc.publicnode.com",arbitrum:"https://arbitrum-one-rpc.publicnode.com",base:"https://base-rpc.publicnode.com",bsc:"https://bsc-rpc.publicnode.com",optimism:"https://optimism-rpc.publicnode.com",polygon:"https://polygon-bor-rpc.publicnode.com",avax:"https://avalanche-c-chain-rpc.publicnode.com",sonic:"https://sonic-rpc.publicnode.com",linea:"https://linea-rpc.publicnode.com",blast:"https://blast-rpc.publicnode.com",berachain:"https://berachain-rpc.publicnode.com",era:"https://mainnet.era.zksync.io",hyperliquid:"https://rpc.hyperliquid.xyz/evm"};
+const EXP={ethereum:"https://etherscan.io/address/",arbitrum:"https://arbiscan.io/address/",base:"https://basescan.org/address/",bsc:"https://bscscan.com/address/",optimism:"https://optimistic.etherscan.io/address/",polygon:"https://polygonscan.com/address/",avax:"https://snowtrace.io/address/",sonic:"https://sonicscan.org/address/",linea:"https://lineascan.build/address/",blast:"https://blastscan.io/address/",berachain:"https://berascan.com/address/",fantom:"https://ftmscan.com/address/",celo:"https://celoscan.io/address/",era:"https://era.zksync.network/address/",hyperliquid:"https://hyperevmscan.io/address/"};
+const S={IMPL:"0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",ADMIN:"0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103",BEACON:"0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50",OI:"0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",OA:"0x10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b"};
+const ch=document.getElementById('chain');Object.keys(RPC).forEach(k=>ch.add(new Option(k,k)));
+async function rpc(c,m,p){try{const r=await fetch(RPC[c],{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:1,method:m,params:p})});const j=await r.json();return j.error?null:j.result}catch(e){return null}}
+const w2a=w=>{if(!w||w.length<66)return null;const a="0x"+w.slice(-40);return /^0x0{40}$/.test(a)?null:a};
+const call=(c,to,d)=>rpc(c,"eth_call",[{to,data:d},"latest"]);const code=(c,a)=>rpc(c,"eth_getCode",[a,"latest"]);
+async function ctl(c,a,d=0){const k=await code(c,a);if(!k||k==="0x")return{t:"EOA (single private key)",a,r:"single"};if(k.startsWith("0xef0100"))return{t:"EOA with 7702 delegation",a,r:"single"};
+const th=await call(c,a,"0xe75235b8");if(th&&th.length>=66){const n=parseInt(th,16);const o=await call(c,a,"0xa0e67e2b");let owners=[];if(o&&o.length>=130){const m=parseInt(o.slice(66,130),16);for(let i=0;i<m;i++)owners.push("0x"+o.slice(130+64*i+24,130+64*(i+1)))}
+const res={t:`Safe ${n}-of-${owners.length}`,a,r:n>1?"multi":"single"};if(n<=1&&d<2){res.sub=[];for(const x of owners.slice(0,5))res.sub.push(await ctl(c,x,d+1));const rs=res.sub.map(s=>s.r);res.r=rs.includes("single")?"single":rs.includes("unknown")?"unknown":rs.includes("multi")?"multi":"timelock"}return res}
+for(const s of["0xf27a0c92","0x6a42b8f8"]){const x=await call(c,a,s);if(x&&x.length>=66)return{t:`Timelock (${Math.round(parseInt(x,16)/3600)}h delay)`,a,r:"timelock"}}
+if(d<2){const o=w2a(await call(c,a,"0x8da5cb5b"));if(o){const i=await ctl(c,o,d+1);return{t:"Contract (e.g. ProxyAdmin), owned by:",a,r:i.r,sub:[i]}}}return{t:"Contract (unrecognised: governance or custom)",a,r:"unknown"}}
+function fmt(c,x,ind=""){const cls=x.r==="single"?"red":x.r==="unknown"?"amb":"grn";let s=`${ind}<span class="${cls}">${x.t}</span> <a href="${EXP[c]}${x.a}" target=_blank><code>${x.a}</code></a><br>`;(x.sub||[]).forEach(y=>s+=fmt(c,y,ind+"&nbsp;&nbsp;&nbsp;&nbsp;↳ "));return s}
+async function runCheck(){const c=ch.value,a=document.getElementById('addr').value.trim().toLowerCase(),o=document.getElementById('out');if(!/^0x[0-9a-f]{40}$/.test(a)){o.textContent="Enter a 0x address";return}
+o.textContent="Reading chain…";const k=await code(c,a);if(!k||k==="0x"){o.textContent="No contract code at this address on "+c;return}
+let impl=w2a(await rpc(c,"eth_getStorageAt",[a,S.IMPL,"latest"]));const be=w2a(await rpc(c,"eth_getStorageAt",[a,S.BEACON,"latest"]));let ad=w2a(await rpc(c,"eth_getStorageAt",[a,S.ADMIN,"latest"]));
+if(!impl){impl=w2a(await rpc(c,"eth_getStorageAt",[a,S.OI,"latest"]));if(impl&&!ad)ad=w2a(await rpc(c,"eth_getStorageAt",[a,S.OA,"latest"]))}
+const roles=[];if(ad)roles.push(["Proxy admin: can replace all the code",ad]);else if(be){const bo=w2a(await call(c,be,"0x8da5cb5b"));if(bo)roles.push(["Beacon owner: can replace all the code",bo])}
+const ow=w2a(await call(c,a,"0x8da5cb5b"));if(ow)roles.push([impl&&!ad?"owner() (UUPS proxy: can replace all the code)":"owner()",ow]);
+let h=`<p>Upgradeable: <b>${impl||be?"yes":"no proxy detected"}</b></p>`;if(!roles.length)h+="<p>No proxy admin or owner() found. It may use AccessControl roles, which this free check doesn't enumerate. The Permission Map covers them.</p>";
+let worst="";for(const[r,x]of roles){const t=await ctl(c,x);if(t.r==="single")worst="single";h+=`<p><b>${r}</b><br>${fmt(c,t)}</p>`}
+if(worst)h+=`<p class="red">At least one power on this contract comes down to a single private key.</p><p><a href="#pricing">Get the full Permission Map →</a></p>`;o.innerHTML=h;
+}
+let D=[];fetch('data.json').then(r=>r.json()).then(j=>{D=j.rows;stats();render()});
+const M=v=>v>=1e9?"$"+(v/1e9).toFixed(1)+"B":v>=1e6?"$"+(v/1e6).toFixed(1)+"M":"$"+Math.round(v/1e3)+"k";
+function stats(){const up=D.filter(r=>r.v==="SINGLE KEY can upgrade"),ow=D.filter(r=>r.v==="SINGLE KEY owner"),ms=D.filter(r=>r.v==="multisig, no timelock"),tl=D.filter(r=>r.v==="timelock / multisig");
+document.getElementById('stats').innerHTML=[[D.length,"tokens scanned"],[up.length,"upgradeable by one key"],[ow.length,"owned by one key"],[ms.length,"multisig, no timelock"],[tl.length,"behind a timelock"]].map(([n,l])=>`<div class=stat><b>${n}</b>${l}</div>`).join("")}
+function render(){const only=document.getElementById('onlyrisk').checked,q=document.getElementById('q').value.toLowerCase();
+let rs=D.filter(r=>(!only||r.v.startsWith("SINGLE"))&&(!q||r.p.toLowerCase().includes(q))).sort((a,b)=>(b.v==="SINGLE KEY can upgrade")-(a.v==="SINGLE KEY can upgrade")||b.tvl-a.tvl);
+document.getElementById('tbl').innerHTML="<tr><th>Protocol</th><th>Token</th><th>TVL</th><th>Verdict</th><th>Control path</th><th>Code has</th></tr>"+rs.map(r=>`<tr><td>${r.p}</td><td><a href="${EXP[r.chain]}${r.a}" target=_blank>${r.sym||"token"}</a> <span class=mut>${r.chain}</span></td><td>${M(r.tvl)}</td><td class="${r.v.startsWith("SINGLE")?"red":r.v.includes("timelock /")?"grn":"amb"}">${r.v}</td><td>${r.c.map(c=>`${c.role}: ${c.type} <a href="${EXP[r.chain]}${c.addr}" target=_blank>${c.addr.slice(0,8)}…</a>`).join("<br>")||"-"}</td><td>${r.powers.join(", ")}</td></tr>`).join("")}
+async function sub(e){e.preventDefault();const f=e.target,fs=document.getElementById('fs');fs.textContent="Sending…";
+try{const r=await fetch("https://formsubmit.co/ajax/megafi.app1+onekeyaway@gmail.com",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({email:f.email.value,plan:f.plan.value,protocol:f.protocol.value,_subject:"OneKeyAway order/waitlist",_honey:f._honey.value})});
+fs.textContent=r.ok?"Got it. We'll reply within a few hours.":"That didn't send. Please email us instead."}catch(x){fs.textContent="That didn't send. Please email megafi.app1+onekeyaway@gmail.com"}return false}
+</script>
+</body></html>
