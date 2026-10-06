@@ -22,3 +22,12 @@
 - Full scan (batch3) of ~360 older protocols plus re-verification produced at least 35 protocols and issuers with EOA-upgradeable core contracts, including CIAN ($320M), BitFi, River, Treehouse, YieldFi, VNX, KAIO/Libre, Hex Trust USDX, and big issuers (USDC, PYUSD, USDtb, BUIDL-I, which are presumably HSM-backed).
 - Emailed VNX (support@vnx.li). DGLD auto-acked with ticket SUP-496. DL News tip bounced (both addresses dead).
 - MISTAKE: importing send1.py re-ran its send loop, so the 4 notices went out twice. I sent a one-line apology to each. Fix: shared text lives in outreach/common.py and send scripts are never imported. Lesson: never import a script that has side effects at module level.
+
+## 2026-10-06 ~17:40 UTC
+- Emailed 5 more verified teams: Hyperlane (HYPER on Arbitrum), KAIO (6 fund tokens on Avax), BitFi (bfBTC ETH+BSC), TurboFlow (deposit bridge), VNX. Total so far: **9 teams**. Log: outreach/sent.json + sent.jsonl.
+- Contact discovery is the bottleneck. Most DeFi sites are SPAs with no email. Rendering their legal pages in a browser found 2 more (BitFi, TurboFlow).
+- Forums: the Ethereum Magicians account works but new users get "Access Denied" on topic creation. The Safe forum signup code never arrived. The Venus forum is registered but unused, because Venus Flux turned out to be a 4-signer Avocado (not a finding).
+- DefiLlama /raises is now paid (402), so the VC-portfolio angle is dropped.
+- Shipped: Permission Map generator (scanner/permmap.py), public sample on USDC (docs/sample-usdc.md), and "scan a whole protocol" on the site (585 protocols indexed, client-side).
+- Filed approvals: warm intros from Sami's network, LinkedIn post. Pending earlier: X account, HN post, Whop.
+- X thread drafted: outreach/posts/x-thread.md. Forum research post: outreach/posts/forum-research.md.
