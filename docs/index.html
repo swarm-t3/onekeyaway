@@ -33,6 +33,11 @@ code{background:#21262d;padding:1px 5px;border-radius:4px;font-size:.9em;word-br
 <div id="out" class="mut" style="margin-top:10px">Runs in your browser over public RPC. Nothing is sent to us.</div>
 </div>
 
+<div class="card" id="pscan">
+<h3 style="margin-top:0">Free check: a whole protocol</h3>
+<div class="row"><input type="text" id="pname" list="plist" placeholder="Protocol name, e.g. Aave V3, Morpho, Ethena…"><button onclick="runProto()">Scan protocol</button></div><datalist id="plist"></datalist>
+<div id="pout" class="mut" style="margin-top:10px">Reads up to 12 contracts per protocol, taken from DefiLlama's open-source TVL adapter (585 protocols indexed). The list can include third-party tokens a protocol holds, such as USDC, so check the name column.</div>
+</div>
 <h2>What we found</h2>
 <div class="card"><b>Contracts that hold TVL:</b> we read the control path of about 2,000 contracts from about 480 protocols, using addresses from DefiLlama's open-source TVL adapters. Each hit was then checked by hand, and we dropped third-party tokens and factories that can't touch existing funds. <b class="red">At least 35 protocols and token issuers have a core or fund-holding contract whose upgrade path ends at one EOA, with no on-chain multisig and no timelock.</b>
 <ul><li><b>Recently launched DeFi:</b> 10 of the 125 protocols listed in the last 12 months, including a ~$157M stablecoin wrapper, a ~$142M BTC yield vault and a perps bridge that holds user deposits.</li>
@@ -96,6 +101,23 @@ let h=`<p>Upgradeable: <b>${impl||be?"yes":"no proxy detected"}</b></p>`;if(!rol
 let worst="";for(const[r,x]of roles){const t=await ctl(c,x);if(t.r==="single")worst="single";h+=`<p><b>${r}</b><br>${fmt(c,t)}</p>`}
 if(worst)h+=`<p class="red">At least one power on this contract comes down to a single EOA signer with no on-chain multisig or timelock. That EOA may sit behind MPC or an HSM, which can\'t be checked on-chain, but a compromised signer could still act instantly.</p><p><a href="#pricing">Get the full Permission Map →</a></p>`;o.innerHTML=h;
 }
+
+let PI=null;fetch('protocols-index.json').then(r=>r.json()).then(j=>{PI=j;const dl=document.getElementById('plist');j.forEach(p=>dl.appendChild(new Option(p[0])))});
+async function nameOf(c,a){const r=await call(c,a,"0x06fdde03");try{const h=r.slice(2);const n=parseInt(h.slice(64,128),16);let s="";for(let i=0;i<n;i++)s+=String.fromCharCode(parseInt(h.slice(128+2*i,130+2*i),16));return s}catch(e){return ""}}
+async function oneAddr(chains,a){for(const c of chains){if(!RPC[c])continue;const k=await code(c,a);if(!k||k==="0x"||k.startsWith("0xef0100"))continue;
+let impl=w2a(await rpc(c,"eth_getStorageAt",[a,S.IMPL,"latest"]));const be=w2a(await rpc(c,"eth_getStorageAt",[a,S.BEACON,"latest"]));let ad=w2a(await rpc(c,"eth_getStorageAt",[a,S.ADMIN,"latest"]));
+if(!impl){impl=w2a(await rpc(c,"eth_getStorageAt",[a,S.OI,"latest"]));if(impl&&!ad)ad=w2a(await rpc(c,"eth_getStorageAt",[a,S.OA,"latest"]))}
+let up=null;if(ad)up=await ctl(c,ad);else if(be){const bo=w2a(await call(c,be,"0x8da5cb5b"));if(bo)up=await ctl(c,bo)}
+const ow=w2a(await call(c,a,"0x8da5cb5b"));let o=null;if(ow)o=await ctl(c,ow);if(impl&&!ad&&o)up=o;
+return{c,a,name:await nameOf(c,a),upg:!!(impl||be),up,o}}return null}
+const lab=x=>x?`<span class="${x.r==="single"?"red":x.r==="unknown"?"amb":"grn"}">${x.sub&&x.sub.length===1?x.t.replace(", owned by:","")+" → "+x.sub[0].t:x.t}</span>`:"-";
+async function runProto(){const q=document.getElementById('pname').value.trim().toLowerCase(),o=document.getElementById('pout');if(!PI){o.textContent="Index still loading…";return}
+const p=PI.find(x=>x[0].toLowerCase()===q)||PI.find(x=>x[0].toLowerCase().includes(q));if(!p){o.textContent="Not in our index yet. Email us and we'll add it.";return}
+o.innerHTML=`Scanning <b>${p[0]}</b> (${M(p[1])} TVL), ${p[3].length} contracts on ${p[2].join(", ")}…`;
+const rs=await Promise.all(p[3].map(a=>oneAddr(p[2],a)));let single=0;
+let h=`<p><b>${p[0]}</b> · ${M(p[1])} TVL</p><div style="overflow-x:auto"><table><tr><th>Contract</th><th>Name</th><th>Upgradeable</th><th>Who can upgrade</th><th>owner()</th></tr>`;
+for(const r of rs.filter(Boolean)){if((r.up&&r.up.r==="single"))single++;h+=`<tr><td><a href="${EXP[r.c]}${r.a}" target=_blank>${r.a.slice(0,10)}…</a> <span class=mut>${r.c}</span></td><td>${r.name||""}</td><td>${r.upg?"yes":"no"}</td><td>${r.upg?lab(r.up):"-"}</td><td>${lab(r.o)}</td></tr>`}
+h+="</table></div>";h+=single?`<p class="red">${single} contract(s) can be upgraded by a single EOA. If they belong to this protocol (not a third-party token), that's the attack surface. <a href="#pricing">Get the full Permission Map →</a></p>`:`<p class="grn">No single-EOA upgrade path among these contracts. Roles like minter, pauser and oracle aren't covered here. The Permission Map covers them.</p>`;o.innerHTML=h}
 let D=[];fetch('data.json').then(r=>r.json()).then(j=>{D=j.rows;stats();render()});
 const M=v=>v>=1e9?"$"+(v/1e9).toFixed(1)+"B":v>=1e6?"$"+(v/1e6).toFixed(1)+"M":"$"+Math.round(v/1e3)+"k";
 function stats(){const up=D.filter(r=>r.v==="SINGLE KEY can upgrade"),ow=D.filter(r=>r.v==="SINGLE KEY owner"),ms=D.filter(r=>r.v==="multisig, no timelock"),tl=D.filter(r=>r.v==="timelock / multisig");
