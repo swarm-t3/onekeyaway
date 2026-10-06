@@ -4,3 +4,7 @@
 {"to": "hello@harmonix.fi", "subject": "apology for duplicate", "sent": "2026-10-06T16:57Z"}
 {"to": "dev@rain.one", "subject": "apology for duplicate", "sent": "2026-10-06T16:57Z"}
 {"note": "16:55Z: the 4 notices in sent.json were accidentally re-sent once (import side effect), followed by an apology email to each"}
+{"to": "hello@hyperlane.xyz", "subject": "HYPER on Arbitrum: upgrade path and owner end at a single EOA", "sent": "2026-10-06T17:02Z"}
+{"to": "info@kaiolabs.xyz", "subject": "KAIO fund tokens on Avalanche: UUPS owner is a single EOA", "sent": "2026-10-06T17:02Z"}
+{"to": "contact@bitfi.org", "subject": "bfBTC: UUPS owner is a single EOA on Ethereum and BNB Chain", "sent": "2026-10-06T17:05Z"}
+{"to": "contacts@tf.xyz", "subject": "TurboFlow bridge contract on BNB Chain: ProxyAdmin owned by a single EOA", "sent": "2026-10-06T17:06Z"}
